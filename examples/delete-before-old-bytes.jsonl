@@ -1,0 +1,15 @@
+{"at":0,"kind":"site","record":{"name":"s","region":"inside","online":true}}
+{"at":0,"kind":"policy","record":{"class":"quality","epoch":1,"regions":["inside"]}}
+{"at":1,"kind":"put","record":{"object":"scan","class":"quality","rev":1,"text":"obsolete"}}
+{"at":2,"kind":"replicate","record":{"intent":"i1","object":"scan","rev":1,"site":"s","epoch":1}}
+{"at":3,"kind":"delete","record":{"object":"scan","rev":2}}
+{"at":4,"kind":"replicate","record":{"intent":"del","object":"scan","rev":2,"site":"s","epoch":1}}
+{"at":5,"kind":"ack","record":{"intent":"del","outcome":"applied","marker":2}}
+{"at":6,"kind":"ack","record":{"intent":"i1","outcome":"stored","copy":"delayed-copy"}}
+{"at":7,"kind":"read","record":{"site":"s","object":"scan","min":2}}
+{"at":8,"kind":"put","record":{"object":"scan","class":"quality","rev":3,"text":"new"}}
+{"at":9,"kind":"replicate","record":{"intent":"i3","object":"scan","rev":3,"site":"s","epoch":1}}
+{"at":10,"kind":"ack","record":{"intent":"i3","outcome":"stored","copy":"latest"}}
+{"at":11,"kind":"ack","record":{"intent":"del","outcome":"applied","marker":2}}
+{"at":12,"kind":"read","record":{"site":"s","object":"scan","min":3}}
+{"at":13,"kind":"inspect","record":{"object":"scan"}}

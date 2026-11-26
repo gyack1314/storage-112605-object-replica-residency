@@ -1,0 +1,14 @@
+[
+  "ack",
+  "connect",
+  "delete",
+  "inspect",
+  "policy",
+  "purge",
+  "purge_ack",
+  "put",
+  "read",
+  "replicate",
+  "restart",
+  "site"
+]
